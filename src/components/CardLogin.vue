@@ -25,7 +25,7 @@
                     </div>
                     <a href="#" class="texto-roxo text-decoration-none">Esqueci a senha</a>
                 </div>
-                <button type="submit" class="btn-roxo w-100">Entrar</button>
+                <router-link to="/menu-usuario" type="submit" class="btn-roxo w-100">Entrar</router-link>
             </form>
             <p class="mt-4">
                 Não tem conta? <a href="#" class="texto-roxo text-decoration-none">Cadastre-se</a>
