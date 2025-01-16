@@ -9,7 +9,7 @@
     }
 
     .logo {
-        width: 20%;
+        width: 50%;
     }
 
     .formulario {
@@ -52,4 +52,10 @@
         }
     }
 
+}
+
+@media (max-width: 768px) {
+    .formulario {
+        max-width: 90% !important;
+    }
 }
