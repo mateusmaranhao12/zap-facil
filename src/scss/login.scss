@@ -1,7 +1,9 @@
+@import 'variaveis';
+
 .secao-login {
 
     .bg-light {
-        background-color: #f8f9fa !important;
+        background-color: $bg-light !important;
     }
 
     .object-fit-cover {
@@ -17,18 +19,18 @@
     }
 
     .texto-roxo {
-        color: #6941c6;
+        color: $purple;
         font-weight: bold;
         transition: color .3s ease;
 
         &:hover {
-            color: #5c3a9f;
+            color: $purple-hover;
         }
     }
 
     .btn-roxo {
-        background-color: #6941c6;
-        color: #FFF;
+        background-color: $purple;
+        color: $white;
         border: none;
         border-radius: 10px;
         padding: 10px;
@@ -36,20 +38,20 @@
         text-decoration: none;
 
         &:hover {
-            background-color: #5c3a9f;
+            background-color: $purple-hover;
         }
     }
 
     .form-control {
-        background-color: #f8f9fa;
+        background-color: $bg-light;
     }
 
     .form-check-input {
-        background-color: #f8f9fa;
+        background-color: $bg-light;
 
         &:checked {
-            background-color: #6941c6;
-            border: 1px solid #5c3a9f;
+            background-color: $purple;
+            border: 1px solid $purple-hover;
         }
     }
 
