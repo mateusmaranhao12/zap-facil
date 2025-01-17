@@ -1,0 +1,69 @@
+<template>
+    <!-- Cabeçalho do Chat -->
+    <div class="chat-header d-flex align-items-center justify-content-between">
+        <div class="user-info d-flex align-items-center">
+            <img src="../assets/imgs/user3.png" alt="Avatar" class="avatar img-fluid">
+            <div class="ms-3">
+                <h5 class="user-name">Lucas Rafael</h5>
+                <span class="user-status text-success">● Online</span>
+                <p class="user-phone">(11) 99840-0139</p>
+            </div>
+        </div>
+        <div class="chat-actions d-flex">
+            <button class="btn-action"><i class="fa-solid fa-clock"></i> Histórico</button>
+            <button class="btn-action"><i class="fa-solid fa-table-columns"></i>
+                Tabulação</button>
+            <button class="btn-action"><i class="fa-solid fa-ellipsis"></i></button>
+        </div>
+    </div>
+
+    <!-- Corpo do Chat -->
+    <div class="chat-body">
+        <div class="message received">
+            <img src="../assets/imgs/user3.png" alt="Avatar" class="avatar">
+            <div class="message-content">
+                <p>Bom dia! Só pra reforçar minha pergunta de ontem, também queria saber
+                    qual o prazo mínimo de antecedência para fazer o pedido. Obrigado!</p>
+                <span class="message-time">Hoje 2:20</span>
+            </div>
+        </div>
+        <div class="message sent">
+            <div class="message-content">
+                <p>Bom dia! Sim, fazemos bolo de aniversário por encomenda e você pode
+                    personalizar tanto o sabor quanto a decoração. O prazo mínimo é de 3
+                    dias de antecedência, dependendo do tamanho e da complexidade do pedido.
+                </p>
+                <div class="message-reactions">
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-thumbs-up"></i>
+                </div>
+                <span class="message-time">Agora mesmo</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé do Chat -->
+    <div class="chat-footer d-flex align-items-center">
+        <img src="../assets/imgs/user1.png" alt="Avatar" class="avatar">
+        <textarea class="message-input" placeholder="Digite uma mensagem"></textarea>
+        <div class="icones-enviar">
+            <i class="fa-regular fa-face-smile fa-2x ms-3"></i>
+            <i class="fa-solid fa-microphone fa-2x ms-3"></i>
+            <i class="fa-solid fa-ellipsis fa-2x ms-3"></i>
+        </div>
+        <button class="btn-send"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+    </div>
+</template>
+
+<script>
+
+export default {
+
+    name: 'chat-usuario',
+
+    components: {
+    }
+
+}
+
+</script>
