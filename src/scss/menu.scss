@@ -36,6 +36,16 @@
             opacity: 1;
         }
     }
+
+    /* Estilo para o link ativo */
+    .router-link-active {
+        color: #6f42c1;
+        cursor: text;
+
+        i {
+            color: #6f42c1;
+        }
+    }
 }
 
 .img-usuario {
@@ -48,29 +58,42 @@
     margin-left: 6em;
 }
 
-//Responsividade
+// Responsividade
 @media (max-width: 768px) {
     .nav-aside {
-        display: $none;
+        display: none;
         /* Oculta a barra lateral no mobile */
     }
 
     .navbar {
-        display: $flex;
-        align-items: $center;
+        display: flex;
+        align-items: center;
         height: 60px;
+        justify-content: space-between;
+        /* Espaçamento uniforme */
+        padding: 0 15px;
+        /* Adiciona um espaçamento horizontal */
+        background-color: #fff;
+        /* Adiciona fundo branco */
     }
 
     .navbar .nav-link {
-        display: $flex;
-        align-items: $center;
-        justify-content: $center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: 1.2rem;
-        color: $black;
+        color: #000;
+        /* Cor preta para os ícones */
+        text-decoration: none;
+
+        &.router-link-active {
+            color: #6f42c1;
+            /* Cor roxa para o ícone ativo */
+        }
     }
 
     .navbar-toggler {
-        border: $none;
+        border: none;
         background-color: transparent;
     }
 
@@ -78,14 +101,19 @@
         background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     }
 
+    /* Corrige o espaçamento para o conteúdo principal */
     .col-md-11 {
         margin-top: 70px;
+        /* Espaçamento abaixo da navbar no mobile */
     }
 
     .conteudo-principal {
         margin-left: 0;
+        padding: 15px;
+        /* Ajusta o padding no mobile */
     }
 }
+
 
 .ver-todos {
     margin: 20px;

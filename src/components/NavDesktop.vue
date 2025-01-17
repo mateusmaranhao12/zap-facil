@@ -8,23 +8,24 @@
     <!-- Ícones do menu no desktop -->
     <nav class="nav flex-column text-center nav-aside">
         <!-- Ícone 1 - Início -->
-        <a href="#" class="nav-link p-3">
+        <router-link to="/" class="nav-link p-3">
             <i class="fa-solid fa-table-cells-large"></i>
             <span class="custom-tooltip">Início</span>
-        </a>
+        </router-link>
 
         <!-- Ícone 2 - Chats -->
-        <a href="#" class="nav-link p-3">
+        <router-link to="/menu-usuario/conversas" class="nav-link p-3">
             <i class="fa-regular fa-comments"></i>
             <span class="custom-tooltip">Chats</span>
-        </a>
+        </router-link>
 
         <!-- Ícone 3 - Kanban -->
-        <a href="#" class="nav-link p-3">
+        <router-link to="/menu-usuario/kanban" class="nav-link p-3">
             <i class="fa-solid fa-bars-staggered"></i>
             <span class="custom-tooltip">Kanban</span>
-        </a>
+        </router-link>
     </nav>
+
 
     <!-- Espaço flexível para alinhar o avatar ao final -->
     <div class="mt-auto">

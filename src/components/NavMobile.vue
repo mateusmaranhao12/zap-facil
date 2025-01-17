@@ -2,19 +2,19 @@
     <!-- Ícones do menu no mobile -->
     <nav class="nav justify-content-evenly w-75">
         <!-- Ícone 1 - Início -->
-        <a href="#" class="nav-link text-center">
+        <router-link to="/" class="nav-link text-center">
             <i class="fa-solid fa-table-cells-large"></i>
-        </a>
+        </router-link>
 
         <!-- Ícone 2 - Chats -->
-        <a href="#" class="nav-link text-center">
+        <router-link to="/menu-usuario/conversas" class="nav-link text-center">
             <i class="fa-regular fa-comments"></i>
-        </a>
+        </router-link>
 
         <!-- Ícone 3 - Kanban -->
-        <a href="#" class="nav-link text-center">
+        <router-link to="/menu-usuario/kanban" class="nav-link text-center">
             <i class="fa-solid fa-bars-staggered"></i>
-        </a>
+        </router-link>
     </nav>
 
     <!-- Foto do Usuário -->

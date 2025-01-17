@@ -26,22 +26,8 @@
                     <!--Navs e Tabs-->
                     <Navbar3 />
 
-                    <!--Mensagens-->
-                    <div class="row mt-5 mb-2">
-                        <!-- Mensagens -->
-                        <aside class="mensagens col-md-4">
-                            <div class="mensagens-container">
-                                <mensagens />
-                            </div>
-                        </aside>
-
-                        <!-- Chat -->
-                        <div class="chat-container col-md-8">
-                            <div class="chat">
-                                <Chat />
-                            </div>
-                        </div>
-                    </div>
+                    <!--Conversas-->
+                    <router-view></router-view>
 
                 </div>
             </div>
@@ -50,8 +36,6 @@
 </template>
 
 <script>
-import Chat from '@/components/Chat.vue'
-import Mensagens from '@/components/Mensagens.vue'
 import MenuAside from '@/components/MenuAside.vue'
 import Navbar1 from '@/components/Navbar1.vue'
 import Navbar2 from '@/components/Navbar2.vue'
@@ -62,9 +46,7 @@ export default {
     name: 'menu-usuario',
 
     components: {
-        Chat,
         MenuAside,
-        Mensagens,
         Navbar1,
         Navbar2,
         Navbar3
