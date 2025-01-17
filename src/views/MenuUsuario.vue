@@ -24,6 +24,9 @@
                     <!--Atendimento-->
                     <Navbar2 />
 
+                    <!--Navs e Tabs-->
+                    <Navbar3 />
+
                 </div>
             </div>
         </div>
@@ -33,7 +36,8 @@
 <script>
 import MenuAside from '@/components/MenuAside.vue'
 import Navbar1 from '@/components/Navbar1.vue'
-import Navbar2 from '@/components/Navbar2.vue';
+import Navbar2 from '@/components/Navbar2.vue'
+import Navbar3 from '@/components/Navbar3.vue'
 
 export default {
 
@@ -42,7 +46,8 @@ export default {
     components: {
         MenuAside,
         Navbar1,
-        Navbar2
+        Navbar2,
+        Navbar3
     }
 
 }

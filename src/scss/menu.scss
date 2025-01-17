@@ -225,3 +225,29 @@
         }
     }
 }
+
+//Navs e Tabs
+.nav-tabs {
+
+    background-color: #eeeeee;
+    padding: 20px;
+    border-radius: 10px;
+
+    .nav-link {
+        color: #333;
+        font-weight: $bold;
+
+        &:hover {
+            background-color: $white;
+
+        }
+    }
+
+    @media (max-width: 768px) {
+        
+        .nav-tabs {
+            margin-left: 0 !important; 
+        }
+    
+    }
+}
