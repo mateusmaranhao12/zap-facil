@@ -40,6 +40,30 @@
                 <span class="message-time">Agora mesmo</span>
             </div>
         </div>
+        <div class="message received">
+            <img src="../assets/imgs/user3.png" alt="Avatar" class="avatar">
+            <div class="message-content">
+                <p>Certo, vou querer um bolo para 20 pessoas, para quarta-feira que vem, eu poderia ir buscar nesse
+                    mesmo dia as 17:00?</p>
+                <span class="message-time">Agora mesmo</span>
+            </div>
+        </div>
+        <div class="message received">
+            <img src="../assets/imgs/user3.png" alt="Avatar" class="avatar">
+            <div class="message-content file-message">
+                <div class="file-header d-flex align-items-center justify-content-between">
+                    <span class="file-sender">Lucas Rafael</span>
+                    <span class="message-time">Agora mesmo</span>
+                </div>
+                <div class="file-content d-flex align-items-center">
+                    <i class="fa-solid fa-file-pdf fa-3x text-danger me-3"></i>
+                    <div>
+                        <p class="file-name">Pedido.PDF</p>
+                        <span class="file-size">1.2 MB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Rodapé do Chat -->
@@ -49,7 +73,28 @@
         <div class="icones-enviar">
             <i class="fa-regular fa-face-smile fa-2x ms-3"></i>
             <i class="fa-solid fa-microphone fa-2x ms-3"></i>
-            <i class="fa-solid fa-ellipsis fa-2x ms-3"></i>
+            <i class="fa-solid fa-ellipsis fa-2x ms-3 dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                aria-expanded="false" style="cursor: pointer;">
+            </i>
+
+            <!-- Dropdown do Bootstrap -->
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <i class="fa-solid fa-paperclip"></i> Enviar documento
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <i class="fa-solid fa-pen"></i> Mensagens formatadas
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i> Transferência
+                    </a>
+                </li>
+            </ul>
         </div>
         <button class="btn-send"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
     </div>

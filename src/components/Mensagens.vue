@@ -23,10 +23,13 @@
             </div>
 
             <!-- Lista de Cards com v-for -->
-            <div v-for="(message, index) in messages" :key="index" class="card-mensagem mt-4">
+            <div v-for="(message, index) in messages" :key="index" :class="{ 'active-message': message.active }"
+                @click="setActiveMessage(index)" class="card-mensagem mt-4">
                 <div class="d-flex align-items-start">
                     <!--Mensagem nao lida-->
-                    <div v-if="!message.lida" class="nao-lida"></div>
+                    <div v-if="!message.lida" class="nao-lida d-flex justify-content-center">
+                        <span>2</span>
+                    </div>
 
                     <!-- Avatar -->
                     <img :src="require(`../assets/imgs/${message.avatar}`)" alt="Avatar" class="avatar img-fluid" />
@@ -99,6 +102,15 @@ export default {
                     status: 'offline',
                     lida: false
                 },
+                {
+                    name: 'Enzo Levy',
+                    avatar: 'user7.png',
+                    time: '5min ago',
+                    phone: '(61) 99732-4666',
+                    text: 'Oi! Vi o cardápio de vocês e tenho uma perguntinha rápida sobre as encomendas...',
+                    status: 'offline',
+                    lida: false
+                },
             ],
         }
     },
@@ -109,5 +121,14 @@ export default {
             return this.messages.filter(message => !message.lida).length
         },
     },
+
+    methods: {
+        //Conversa ativa
+        setActiveMessage(index) {
+            this.messages.forEach((message, i) => {
+                message.active = i === index // Marca apenas a mensagem clicada como ativa
+            })
+        }
+    }
 }
 </script>

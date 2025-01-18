@@ -9,7 +9,7 @@
             <span class="me-3">Ver todos</span>
             <i class="fa-solid fa-arrow-right me-3"></i>
             <span style="background-color: rgb(248, 248, 248); border-radius: 10px; padding: 10px;">
-                Yali Maria
+                Lucas Rafael
             </span>
         </div>
 
