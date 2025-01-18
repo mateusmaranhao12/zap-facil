@@ -11,7 +11,7 @@
         </div>
         <div class="chat-actions d-flex">
             <button class="btn-action"><i class="fa-solid fa-clock"></i> Histórico</button>
-            <button class="btn-action"><i class="fa-solid fa-table-columns"></i>
+            <button @click="toggleTabulacaoMenu" class="btn-action"><i class="fa-solid fa-table-columns"></i>
                 Tabulação</button>
             <button @click="toggleSupervisorMenu" class="btn-action"><i class="fa-solid fa-ellipsis"></i></button>
         </div>
@@ -24,6 +24,9 @@
     <!-- Aba de Chat do Supervisor -->
     <ChatSupervisor v-if="mostrarChatSupervisor" :supervisor="supervisorSelecionado"
         @fechar-chat="fecharChatSupervisor" />
+
+    <!-- Aba de Tabulação -->
+    <Tabulacao :mostrar-tabulacao-menu="mostrarTabulacaoMenu" :campos="campos" @fechar-menu="fecharTabulacaoMenu" />
 
     <!-- Corpo do Chat -->
     <div class="chat-body">
@@ -111,6 +114,7 @@
 <script>
 import ChatSupervisor from './ChatSupervisor.vue'
 import MenuSupervisor from './MenuSupervisor.vue'
+import Tabulacao from './Tabulacao.vue'
 
 export default {
 
@@ -118,7 +122,8 @@ export default {
 
     components: {
         ChatSupervisor,
-        MenuSupervisor
+        MenuSupervisor,
+        Tabulacao
     },
 
     data() {
@@ -126,9 +131,13 @@ export default {
         return {
             mostrarSupervisorMenu: false,
             mostrarChatSupervisor: false,
+
+            mostrarTabulacaoMenu: false,
+            campos: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+
             supervisores: [
                 { id: 1, nome: 'Yali Maria', iniciais: 'YM', avatar: 'user2.png' },
-                { id: 2, nome: 'Enzo Levy', iniciais: 'EL', avatar: 'user7.png'},
+                { id: 2, nome: 'Enzo Levy', iniciais: 'EL', avatar: 'user7.png' },
                 { id: 3, nome: 'Ian Zambanini', iniciais: 'YZ', avatar: 'user4.png' },
             ],
             supervisorSelecionado: null
@@ -152,7 +161,17 @@ export default {
         fecharChatSupervisor() {
             this.mostrarChatSupervisor = false
             this.supervisorSelecionado = null
-        }
+        },
+
+        //Mostrar menu de tabulação
+        toggleTabulacaoMenu() {
+            this.mostrarTabulacaoMenu = !this.mostrarTabulacaoMenu
+        },
+
+        //Fechar tabulação menu
+        fecharTabulacaoMenu() {
+            this.mostrarTabulacaoMenu = false
+        },
     },
 
 }
