@@ -77,62 +77,6 @@ body {
     margin-left: 6em;
 }
 
-// Responsividade da nav aside
-@media (max-width: 768px) {
-    .nav-aside {
-        display: none;
-    }
-
-    .navbar {
-        display: flex;
-        align-items: center;
-        height: 60px;
-        justify-content: space-between;
-        padding: 0 15px;
-        background-color: #fff;
-
-        .nav-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: #000;
-            text-decoration: none;
-            cursor: $pointer;
-
-            &.router-link-active {
-                color: #6f42c1;
-            }
-
-            &.active {
-                color: $purple;
-                cursor: $text;
-            }
-        }
-    }
-
-    .navbar-toggler {
-        border: none;
-        background-color: transparent;
-    }
-
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    }
-
-    /* Corrige o espaçamento para o conteúdo principal */
-    .col-md-11 {
-        margin-top: 70px;
-        /* Espaçamento abaixo da navbar no mobile */
-    }
-
-    .conteudo-principal {
-        margin-left: 0;
-        padding: 15px;
-        /* Ajusta o padding no mobile */
-    }
-}
-
 //Ver todos
 .ver-todos {
     margin: 20px;
@@ -165,26 +109,6 @@ body {
 .time {
     white-space: nowrap;
     /* Garante que os itens fiquem em uma linha, sem quebrar */
-}
-
-/* Ajustes para dispositivos móveis */
-@media (max-width: 768px) {
-
-    .ver-todos,
-    .time {
-        white-space: normal;
-        /* Permite que os itens quebrem linhas em dispositivos pequenos */
-    }
-
-    .ver-todos {
-        margin-bottom: 10px;
-        /* Adiciona espaço entre "ver-todos" e "time" */
-    }
-
-    .ver-todos span,
-    .time span {
-        font-size: 0.9rem;
-    }
 }
 
 //Atendimento
@@ -751,51 +675,6 @@ body {
     }
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .chat {
-        display: $block;
-        width: 100%;
-        height: calc(100vh - 60px);
-        overflow-y: auto;
-    }
-
-    .mensagens {
-        display: $none;
-    }
-
-    .chat-header {
-        flex-wrap: wrap;
-        padding: 10px;
-    }
-
-    .chat-footer {
-        flex-wrap: wrap;
-        padding: 10px;
-    }
-
-    .chat-body {
-        padding: 10px;
-    }
-
-    .message-input {
-        margin-bottom: 10px;
-    }
-
-    .message-content {
-        max-width: 90%;
-    }
-
-    .btn-send {
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .supervisor-header {
-        margin-top: 50px;
-    }
-}
-
 //Aba do telefone
 .telefone-aba {
     position: fixed;
@@ -1141,7 +1020,7 @@ body {
             color: #666;
         }
 
-         .btn-close {
+        .btn-close {
             background: none;
             border: none;
             font-size: 1.5rem;
@@ -1208,5 +1087,128 @@ body {
                 background: #584ad6;
             }
         }
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    .nav-aside {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        justify-content: space-between;
+        padding: 0 15px;
+        background-color: #fff;
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #000;
+            text-decoration: none;
+            cursor: $pointer;
+
+            &.router-link-active {
+                color: #6f42c1;
+            }
+
+            &.active {
+                color: $purple;
+                cursor: $text;
+            }
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        background-color: transparent;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    /* Corrige o espaçamento para o conteúdo principal */
+    .col-md-11 {
+        margin-top: 70px;
+        /* Espaçamento abaixo da navbar no mobile */
+    }
+
+    .conteudo-principal {
+        margin-left: 0;
+        padding: 15px;
+        /* Ajusta o padding no mobile */
+    }
+
+    .ver-todos,
+    .time {
+        white-space: normal;
+        /* Permite que os itens quebrem linhas em dispositivos pequenos */
+    }
+
+    .ver-todos {
+        margin-bottom: 10px;
+        /* Adiciona espaço entre "ver-todos" e "time" */
+    }
+
+    .ver-todos span,
+    .time span {
+        font-size: 0.9rem;
+    }
+
+    .chat {
+        display: $block;
+        width: 100%;
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+
+    .mensagens {
+        display: $none;
+    }
+
+    .chat-header {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .chat-footer {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .chat-body {
+        padding: 10px;
+    }
+
+    .message-input {
+        margin-bottom: 10px;
+    }
+
+    .message-content {
+        max-width: 90%;
+    }
+
+    .btn-send {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .supervisor-header {
+        margin-top: 50px;
+    }
+
+    .tabulacao-menu {
+        display: $none;
+    }
+
+    .chat-supervisor {
+        display: $none;
     }
 }
