@@ -23,6 +23,10 @@ export default {
     components: {
         NavMobile,
         NavDesktop
+    },
+
+    methods: {
+
     }
 
 }

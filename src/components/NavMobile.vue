@@ -15,7 +15,15 @@
         <router-link to="/menu-usuario/kanban" class="nav-link text-center">
             <i class="fa-solid fa-bars-staggered"></i>
         </router-link>
+
+        <!-- Ícone 4 - Telefone -->
+        <a :class="{ active: mostrarAbaTelefone }" class="nav-link p-3" @click="toggleAbaTelefone">
+            <i class="fa-solid fa-phone"></i>
+        </a>
     </nav>
+
+    <!-- Aba do telefone -->
+    <Softphone :mostrarAbaTelefone="mostrarAbaTelefone" @fechar-aba-telefone="toggleAbaTelefone" />
 
     <!-- Foto do Usuário -->
     <img src="../assets/imgs/user1.png" alt="Avatar do Usuário" class="img-fluid img-usuario rounded-circle border" />
@@ -23,13 +31,25 @@
 
 <script>
 
+import Softphone from './Softphone.vue'
 export default {
-
     name: 'nav-mobile',
 
-    components: {
-    }
+    data() {
+        return {
+            mostrarAbaTelefone: false,
+        }
+    },
 
+    components: {
+        Softphone
+    },
+
+    methods: {
+        toggleAbaTelefone() {
+            this.mostrarAbaTelefone = !this.mostrarAbaTelefone
+        },
+    },
 }
 
 </script>
