@@ -13,9 +13,12 @@
             <button class="btn-action"><i class="fa-solid fa-clock"></i> Histórico</button>
             <button class="btn-action"><i class="fa-solid fa-table-columns"></i>
                 Tabulação</button>
-            <button class="btn-action"><i class="fa-solid fa-ellipsis"></i></button>
+            <button @click="toggleSupervisorMenu" class="btn-action"><i class="fa-solid fa-ellipsis"></i></button>
         </div>
     </div>
+
+    <!-- Menu Lateral de Supervisor -->
+    <MenuSupervisor :mostrar="mostrarSupervisorMenu" :supervisores="supervisores" @fechar-menu="toggleSupervisorMenu" />
 
     <!-- Corpo do Chat -->
     <div class="chat-body">
@@ -101,13 +104,33 @@
 </template>
 
 <script>
+import MenuSupervisor from './MenuSupervisor.vue'
 
 export default {
 
     name: 'chat-usuario',
 
     components: {
-    }
+        MenuSupervisor
+    },
+
+    data() {
+
+        return {
+            mostrarSupervisorMenu: false,
+            supervisores: [
+                { id: 1, nome: 'Helaine Matos', iniciais: 'HE' },
+                { id: 2, nome: 'Adibe Marques', iniciais: 'AM' },
+                { id: 3, nome: 'Miguel Andrade', iniciais: 'MA' },
+            ],
+        }
+    },
+
+    methods: {
+        toggleSupervisorMenu() {
+            this.mostrarSupervisorMenu = !this.mostrarSupervisorMenu
+        },
+    },
 
 }
 
