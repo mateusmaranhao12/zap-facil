@@ -7,9 +7,6 @@
             </div>
             <div class="col-md-7 d-flex align-items-center justify-content-end flex-wrap">
                 <!-- Botões -->
-                <button class="btn-supervisor me-3">
-                    <i class="fa-regular fa-comments"></i> Falar com supervisor
-                </button>
                 <button class="btn-roxo me-3">
                     <i class="fa-solid fa-pause"></i> Pausa
                 </button>
