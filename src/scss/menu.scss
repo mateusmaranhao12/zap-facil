@@ -401,6 +401,20 @@ body {
         justify-content: space-between;
         align-items: center;
 
+        .btn-supervisor {
+            background-color: rgb(44, 44, 44);
+            color: $white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            transition: background-color .3s ease;
+            text-decoration: none;
+    
+            &:hover {
+                background-color: $black;
+            }
+        }
+
         .user-info {
             display: flex;
             align-items: center;

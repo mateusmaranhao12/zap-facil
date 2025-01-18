@@ -14,6 +14,9 @@
             <button @click="toggleTabulacaoMenu" class="btn-action"><i class="fa-solid fa-table-columns"></i>
                 Tabulação</button>
             <button @click="toggleSupervisorMenu" class="btn-action"><i class="fa-solid fa-ellipsis"></i></button>
+            <button class="btn-supervisor me-3" @click="toggleSupervisorMenu">
+                <i class="fa-regular fa-comments"></i> Falar com supervisor
+            </button>
         </div>
     </div>
 
