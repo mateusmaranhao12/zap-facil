@@ -11,7 +11,7 @@
                 </div>
                 <div class="supervisor-info">
                     <h6>{{ supervisor.nome }}</h6>
-                    <a href="#" class="supervisor-link">Abrir chat <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#" @click.prevent="$emit('abrir-chat', supervisor)" class="supervisor-link">Abrir chat <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>

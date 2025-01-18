@@ -984,3 +984,107 @@ body {
         }
     }
 }
+
+//Chat com o supervisor
+
+.chat-supervisor {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    .chat-supervisor-header {
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .chat-supervisor-body {
+        flex: 1;
+        padding: 15px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .chat-supervisor-footer {
+        padding: 15px;
+        border-top: 1px solid #ddd;
+        display: flex;
+        gap: 10px;
+
+        .message-input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .btn-send {
+            background: $purple;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                background: $purple-hover;
+            }
+        }
+    }
+
+    .message {
+        padding: 10px;
+        border-radius: 10px;
+        max-width: 70%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+
+        &.received {
+            background-color: #f1f3f5;
+            color: #333;
+            align-self: flex-start;
+            text-align: left;
+        }
+
+        &.sent {
+            background-color: $purple;
+            color: #fff;
+            align-self: flex-end;
+            text-align: left;
+        }
+
+        .message-time {
+            font-size: 0.8rem;
+            color: #aaa;
+            margin-top: 5px;
+            display: block;
+        }
+    }
+
+    textarea {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    button {
+        background: $purple;
+        color: $white;
+        border: $none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: $pointer;
+        transition: background-color .3s ease;
+
+        &:hover {
+            background-color: $purple-hover;
+        }
+    }
+}

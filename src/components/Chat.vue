@@ -18,7 +18,12 @@
     </div>
 
     <!-- Menu Lateral de Supervisor -->
-    <MenuSupervisor :mostrar="mostrarSupervisorMenu" :supervisores="supervisores" @fechar-menu="toggleSupervisorMenu" />
+    <MenuSupervisor :mostrar="mostrarSupervisorMenu" :supervisores="supervisores" @fechar-menu="toggleSupervisorMenu"
+        @abrir-chat="abrirChatSupervisor" />
+
+    <!-- Aba de Chat do Supervisor -->
+    <ChatSupervisor v-if="mostrarChatSupervisor" :supervisor="supervisorSelecionado"
+        @fechar-chat="fecharChatSupervisor" />
 
     <!-- Corpo do Chat -->
     <div class="chat-body">
@@ -104,6 +109,7 @@
 </template>
 
 <script>
+import ChatSupervisor from './ChatSupervisor.vue'
 import MenuSupervisor from './MenuSupervisor.vue'
 
 export default {
@@ -111,6 +117,7 @@ export default {
     name: 'chat-usuario',
 
     components: {
+        ChatSupervisor,
         MenuSupervisor
     },
 
@@ -118,18 +125,34 @@ export default {
 
         return {
             mostrarSupervisorMenu: false,
+            mostrarChatSupervisor: false,
             supervisores: [
                 { id: 1, nome: 'Helaine Matos', iniciais: 'HE' },
                 { id: 2, nome: 'Adibe Marques', iniciais: 'AM' },
                 { id: 3, nome: 'Miguel Andrade', iniciais: 'MA' },
             ],
+            supervisorSelecionado: null
         }
     },
 
     methods: {
+        //mostrar menu de supervisor
         toggleSupervisorMenu() {
             this.mostrarSupervisorMenu = !this.mostrarSupervisorMenu
         },
+
+        //Abrir chat do supervisor
+        abrirChatSupervisor(supervisor) {
+            this.supervisorSelecionado = supervisor
+            this.mostrarChatSupervisor = true
+            this.mostrarSupervisorMenu = false
+        },
+
+        //Fechar chat do supervisor
+        fecharChatSupervisor() {
+            this.mostrarChatSupervisor = false
+            this.supervisorSelecionado = null
+        }
     },
 
 }
