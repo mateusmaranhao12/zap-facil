@@ -127,9 +127,9 @@ export default {
             mostrarSupervisorMenu: false,
             mostrarChatSupervisor: false,
             supervisores: [
-                { id: 1, nome: 'Helaine Matos', iniciais: 'HE' },
-                { id: 2, nome: 'Adibe Marques', iniciais: 'AM' },
-                { id: 3, nome: 'Miguel Andrade', iniciais: 'MA' },
+                { id: 1, nome: 'Yali Maria', iniciais: 'YM', avatar: 'user2.png' },
+                { id: 2, nome: 'Enzo Levy', iniciais: 'EL', avatar: 'user7.png'},
+                { id: 3, nome: 'Ian Zambanini', iniciais: 'YZ', avatar: 'user4.png' },
             ],
             supervisorSelecionado: null
         }

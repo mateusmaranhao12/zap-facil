@@ -11,11 +11,16 @@
             <small>Supervisor</small>
         </div>
         <div class="chat-supervisor-body">
-            <div 
-                class="message" 
-                :class="{ received: !message.sent, sent: message.sent }" 
-                v-for="message in messages" 
+            <div class="message" :class="{ received: !message.sent, sent: message.sent }" v-for="message in messages"
                 :key="message.id">
+
+                <!-- Container para avatar e nome -->
+                <div class="message-header" v-if="!message.sent">
+                    <img :src="require(`../assets/imgs/${supervisor.avatar}`)" alt="Avatar" class="message-avatar">
+                    <small class="name-user-message">{{ supervisor.nome }}</small>
+                </div>
+
+                <!--Mensagem-->
                 <p>{{ message.text }}</p>
                 <span class="message-time">{{ message.time }}</span>
             </div>
@@ -26,7 +31,6 @@
         </div>
     </div>
 </template>
-
 
 <script>
 export default {
