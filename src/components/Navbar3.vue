@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <ul class="nav nav-tabs d-flex justify-content-center ms-2 mt-5">
+        <ul class="nav nav-tabs d-flex justify-content-center ms-2 mt-3">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Chats</a>
             </li>

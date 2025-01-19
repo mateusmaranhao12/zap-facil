@@ -1,5 +1,11 @@
 <template>
     <div class="row mt-5 mb-2">
+
+        <!--Navs e Tabs-->
+        <div class="mb-5">
+            <Navbar3 />
+        </div>
+
         <!-- Mensagens -->
         <aside class="mensagens col-md-4">
             <div class="mensagens-container">
@@ -19,6 +25,7 @@
 <script>
 import Chat from '@/components/Chat.vue'
 import Mensagens from '@/components/Mensagens.vue'
+import Navbar3 from '@/components/Navbar3.vue'
 
 
 export default {
@@ -27,7 +34,8 @@ export default {
 
     components: {
         Chat,
-        Mensagens
+        Mensagens,
+        Navbar3
     }
 
 }
