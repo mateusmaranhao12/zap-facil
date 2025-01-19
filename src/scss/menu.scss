@@ -1332,7 +1332,68 @@ body {
     }
 }
 
-/* Responsividade */
+//SMS
+
+.sms-container {
+    padding: 20px;
+
+    h5 {
+        margin-bottom: 20px;
+        font-weight: $bold;
+        color: #777;
+
+        span {
+            border: 1px solid #777;
+            color: #777;
+        }
+    }
+
+    label {
+        color: #777;
+        font-weight: $bold;
+    }
+
+    .table {
+        background-color: $white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+
+        th {
+            font-weight: 600;
+            color: #777;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+
+        td {
+            padding: 30px;
+            color: #777;
+        }
+    }
+
+    .form-control {
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+
+    .btn-enviar {
+        background-color: $purple;
+        color: $white;
+        border: $none;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: $purple-hover;
+        }
+    }
+
+    .form-text {
+        text-align: right;
+        color: #6c757d;
+    }
+}
+
+// Responsividade 
 @media (max-width: 768px) {
 
     .nav-aside {

@@ -1,4 +1,5 @@
 <template>
+    <Navbar3 />
     <div class="email-container">
         <div class="row">
             <!-- Histórico de e-mails -->
@@ -59,8 +60,15 @@
 </template>
 
 <script>
+import Navbar3 from '@/components/Navbar3.vue'
+
 export default {
     name: 'e-mail',
+
+    components: {
+        Navbar3
+    },
+
     data() {
         return {
             emails: [
