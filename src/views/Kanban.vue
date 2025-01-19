@@ -5,8 +5,9 @@
     </div>
 
     <!-- Aba de Filtro -->
-    <div class="d-flex justify-content-end">
-        <Filtro :mostrar="mostrarFiltro" :filtros-inicial="filtros" @fechar-filtro="toggleFiltro" @aplicar-filtros="aplicarFiltros" />
+    <div class="filtro-container">
+        <Filtro :mostrar="mostrarFiltro" :filtros-inicial="filtros" @fechar-filtro="toggleFiltro"
+            @aplicar-filtros="aplicarFiltros" />
     </div>
 
     <!-- Kanban -->
