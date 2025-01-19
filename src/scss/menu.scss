@@ -393,7 +393,7 @@ body {
             padding: 10px;
             transition: background-color .3s ease;
             text-decoration: none;
-    
+
             &:hover {
                 background-color: $black;
             }
@@ -1088,6 +1088,128 @@ body {
     }
 }
 
+//Ficha Cadastral
+.ficha-cadastral-container {
+    padding: 20px;
+
+    label {
+        font-weight: $bold;
+    }
+
+    textarea {
+        resize: $none;
+    }
+
+    .btn-salvar {
+        background-color: $purple;
+        color: $white;
+        border: $none;
+        padding: 10px;
+        border-radius: 10px;
+        transition: background-color .3s ease;
+
+        &:hover {
+            background-color: $purple-hover;
+        }
+    }
+
+    .btn-cancelar {
+        background-color: $white;
+        color: #777;
+        border: 1px solid #777;
+        padding: 10px;
+        transition: .3s ease;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: #777;
+            color: $white;
+        }
+    }
+
+    .btn-salvar-contato {
+        background-color: $white;
+        color: #777;
+        border: 1px solid #777;
+        padding: 10px;
+        transition: .3s ease;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: #777;
+            color: $white;
+        }
+    }
+
+}
+
+.informacoes-container {
+
+    padding: 20px;
+    border-radius: 8px;
+
+    .input-group {
+        display: $flex;
+        align-items: $center;
+    }
+
+    .input-group-text {
+        padding: 10px;
+    }
+
+    .btn-outline-secondary {
+        background-color: $white;
+        color: #777;
+        border: 1px solid #777;
+    }
+
+    textarea {
+        resize: $none;
+    }
+
+    .btn-salvar {
+        background-color: $purple;
+        color: $white;
+        border: $none;
+        padding: 10px;
+        border-radius: 10px;
+        transition: background-color .3s ease;
+
+        &:hover {
+            background-color: $purple-hover;
+        }
+    }
+
+    .btn-cancelar {
+        background-color: $white;
+        color: #777;
+        border: 1px solid #777;
+        padding: 10px;
+        transition: .3s ease;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: #777;
+            color: $white;
+        }
+    }
+
+    .btn-notas {
+        padding: 10px;
+        display: $flex;
+        align-items: $center;
+        justify-content: $center;
+        background-color: $white;
+        border: $none;
+        color: #777;
+        transition: transform .3s ease;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
 
@@ -1208,5 +1330,19 @@ body {
 
     .chat-supervisor {
         display: $none;
+    }
+
+    .ficha-cadastral-container {
+
+        label[for="cep"],
+        label[for="cidade"],
+        label[for="estado"],
+        label[for="telefone1"],
+        label[for="telefone2"],
+        label[for="endereco"],
+        label[for="bairro"],
+        label[for="complemento"] {
+            margin-top: 15px;
+        }
     }
 }
