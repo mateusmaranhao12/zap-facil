@@ -22,21 +22,38 @@
                 </router-link>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link" active-class="active">
+                <a :class="{ active: mostrarAbaTelefone }" class="nav-link" @click.prevent="toggleAbaTelefone" href="">
                     Fone
                 </a>
             </li>
         </ul>
     </div>
+
+    <!-- Aba do telefone -->
+    <Softphone :mostrarAbaTelefone="mostrarAbaTelefone" @fechar-aba-telefone="toggleAbaTelefone" />
 </template>
 <script>
 
+import Softphone from './Softphone.vue'
 export default {
 
     name: 'navbar-3',
 
+    data() {
+        return {
+            mostrarAbaTelefone: false,
+        }
+    },
+
     components: {
-    }
+        Softphone
+    },
+
+    methods: {
+        toggleAbaTelefone() {
+            this.mostrarAbaTelefone = !this.mostrarAbaTelefone
+        },
+    },
 
 }
 
