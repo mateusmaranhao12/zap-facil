@@ -19,9 +19,13 @@
                                 <th>Resultado</th>
                                 <th>Contato</th>
                                 <th>Agente</th>
+                                <th>Telefone</th>
+                                <th>Protocolo</th>
+                                <th>Tabulações</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- Linhas principais -->
                             <tr v-for="(item, index) in historicoFiltrado" :key="index">
                                 <td>{{ item.tabulacao }}</td>
                                 <td>{{ item.data }}</td>
@@ -45,6 +49,15 @@
                                     {{ item.agente }}
                                     <i class="fa-brands fa-whatsapp text-success ms-2"></i>
                                 </td>
+                                <td>
+                                    {{ item.telefone }}
+                                </td>
+                                <td>
+                                    {{ item.protocolo }}
+                                </td>
+                                <td>
+                                    {{ item.tabDetalhes }}
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -62,21 +75,72 @@ export default {
         return {
             filtroBusca: '',
             historico: [
-                { tabulacao: 'Aguarda retorno', data: '19/08/2024', resultado: 'Salvo', contato: 'Ligação', agente: 'Rogério Eduardo' },
-                { tabulacao: 'Não aceitou', data: '19/08/2024', resultado: 'Salvo', contato: 'E-mail', agente: 'Rogério Eduardo' },
-                { tabulacao: 'Operador não tabulou', data: '19/08/2024', resultado: 'Envio de e-mail', contato: 'E-mail', agente: 'Rogério Eduardo' },
-                { tabulacao: 'Modelo ATN 01', data: '19/08/2024', resultado: 'Envio de e-mail', contato: 'E-mail', agente: 'Rogério Eduardo' },
-                { tabulacao: 'Testando', data: '19/08/2024', resultado: 'Salvo', contato: 'Whatsapp', agente: 'Rogério Eduardo' },
+                {
+                    id: 1,
+                    tabulacao: 'Aguarda retorno',
+                    data: '19/08/2024',
+                    resultado: 'Salvo',
+                    contato: 'Ligação',
+                    agente: 'Rogério Eduardo',
+                    telefone: '(91) 99840-0139',
+                    protocolo: '2031108162704154',
+                    tabDetalhes: 'Modelo ATN 05',
+                },
+                {
+                    id: 2,
+                    tabulacao: 'Não aceitou',
+                    data: '19/08/2024',
+                    resultado: 'Salvo',
+                    contato: 'E-mail',
+                    agente: 'Rogério Eduardo',
+                    telefone: '(91) 99840-0139',
+                    protocolo: '2031108162704154',
+                    tabDetalhes: 'Modelo ATN 05',
+                },
+                {
+                    id: 3,
+                    tabulacao: 'Operador não tabulou',
+                    data: '19/08/2024',
+                    resultado: 'Envio de e-mail',
+                    contato: 'E-mail',
+                    agente: 'Rogério Eduardo',
+                    telefone: '(91) 99840-0139',
+                    protocolo: '2031108162704154',
+                    tabDetalhes: 'Modelo ATN 05',
+                },
+                {
+                    id: 4,
+                    tabulacao: 'Operador não tabulou',
+                    data: '19/08/2024',
+                    resultado: 'Envio de e-mail',
+                    contato: 'E-mail',
+                    agente: 'Rogério Eduardo',
+                    telefone: '(91) 99840-0139',
+                    protocolo: '2031108162704154',
+                    tabDetalhes: 'Modelo ATN 05',
+                },
+                {
+                    id: 5,
+                    tabulacao: 'Operador não tabulou',
+                    data: '19/08/2024',
+                    resultado: 'Salvo',
+                    contato: 'Whatsapp',
+                    agente: 'Rogério Eduardo',
+                    telefone: '(91) 99840-0139',
+                    protocolo: '2031108162704154',
+                    tabDetalhes: 'Modelo ATN 05',
+                },
             ],
         }
     },
 
     computed: {
         historicoFiltrado() {
+            // Filtra os itens pelo texto de busca
             return this.historico.filter((item) =>
                 item.tabulacao.toLowerCase().includes(this.filtroBusca.toLowerCase())
             )
         },
     },
-};
+}
 </script>

@@ -1413,11 +1413,10 @@ body {
     animation: fadeIn 0.3s ease-out;
 
     .modal-content {
-        
+
         background: $white;
         width: 95%;
         max-width: 95%;
-        height: 95%;
         max-height: 95%;
         border-radius: 8px;
         overflow: hidden;
@@ -1427,10 +1426,13 @@ body {
         .modal-header {
             padding: 35px;
             border-bottom: 1px solid #ddd;
+            flex-shrink: 0; //impede de encolher ao rolar
         }
 
         .modal-body {
             padding: 30px;
+            flex: 1; // Permite que o corpo ocupe o restante do espaço
+            overflow-y: auto; // Habilita a rolagem vertical se necessário
 
             .table-responsive {
                 overflow-x: auto;
