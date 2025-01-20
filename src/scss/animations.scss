@@ -1,0 +1,34 @@
+// Animações
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); // Vem de cima
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0); // Posição final
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px); // Vem da esquerda
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0); // Posição final
+    }
+}

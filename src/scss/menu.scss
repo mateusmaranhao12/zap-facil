@@ -1,4 +1,5 @@
 @import 'variaveis';
+@import 'animations';
 
 //Html em geral
 * {
@@ -685,6 +686,7 @@ body {
     width: 300px;
     padding: 20px;
     z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
 
     .telefone-header {
         display: flex;
@@ -790,6 +792,7 @@ body {
     z-index: 1000;
     display: flex;
     flex-direction: $column;
+    animation: fadeInRight 0.3s ease-out;
 
     .supervisor-header {
         padding: 15px;
@@ -874,6 +877,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
+    animation: fadeInRight 0.3s ease-out;
 
     .chat-supervisor-header {
         padding: 15px;
@@ -1001,6 +1005,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 20px;
+    animation: fadeInRight 0.3s ease-out;
 
     .tabulacao-header {
         border-bottom: 1px solid #ddd;
@@ -1390,6 +1395,72 @@ body {
     .form-text {
         text-align: right;
         color: #6c757d;
+    }
+}
+
+//Modal Histórico
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: $flex;
+    justify-content: $center;
+    align-items: $center;
+    z-index: 1050;
+    animation: fadeIn 0.3s ease-out;
+
+    .modal-content {
+        
+        background: $white;
+        width: 95%;
+        max-width: 95%;
+        height: 95%;
+        max-height: 95%;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        animation: fadeInDown 0.5s ease-out;
+
+        .modal-header {
+            padding: 35px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .modal-body {
+            padding: 30px;
+
+            .table-responsive {
+                overflow-x: auto;
+                width: 100%;
+            }
+
+            .table {
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                overflow-x: auto;
+
+                th {
+                    font-weight: 600;
+                    padding-right: 25px;
+                    padding-left: 25px;
+                }
+
+                td {
+                    padding: 25px;
+                    white-space: nowrap; // Evita quebra de texto
+                }
+
+                .badge {
+                    padding: 5px 10px;
+                    border-radius: 12px;
+                    font-size: 12px;
+                }
+            }
+        }
     }
 }
 

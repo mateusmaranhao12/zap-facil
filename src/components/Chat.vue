@@ -10,15 +10,19 @@
             </div>
         </div>
         <div class="chat-actions d-flex col">
-            <button class="btn-action"><i class="fa-solid fa-clock"></i> Histórico</button>
+            <button @click="abrirHistorico()" class="btn-action"><i class="fa-solid fa-clock"></i> Histórico</button>
             <button @click="toggleTabulacaoMenu" class="btn-action"><i class="fa-solid fa-table-columns"></i>
                 Tabulação</button>
-            <button @click="toggleSupervisorMenu" class="btn-action d-none"><i class="fa-solid fa-ellipsis"></i></button>
+            <button @click="toggleSupervisorMenu" class="btn-action d-none"><i
+                    class="fa-solid fa-ellipsis"></i></button>
             <button class="btn-supervisor ms-3" @click="toggleSupervisorMenu">
                 <i class="fa-regular fa-comments"></i> Falar com supervisor
             </button>
         </div>
     </div>
+
+    <!-- Menu do Histórico -->
+    <Historico v-if="mostrarHistorico"  @fechar-historico="fecharHistorico" />
 
     <!-- Menu Lateral de Supervisor -->
     <MenuSupervisor :mostrar="mostrarSupervisorMenu" :supervisores="supervisores" @fechar-menu="toggleSupervisorMenu"
@@ -116,6 +120,7 @@
 
 <script>
 import ChatSupervisor from './ChatSupervisor.vue'
+import Historico from './Historico.vue'
 import MenuSupervisor from './MenuSupervisor.vue'
 import Tabulacao from './Tabulacao.vue'
 
@@ -125,6 +130,7 @@ export default {
 
     components: {
         ChatSupervisor,
+        Historico,
         MenuSupervisor,
         Tabulacao
     },
@@ -132,18 +138,28 @@ export default {
     data() {
 
         return {
+            //mostrar supervisor
             mostrarSupervisorMenu: false,
+
+            //mostrar chat com supervisor
             mostrarChatSupervisor: false,
 
-            mostrarTabulacaoMenu: false,
-            campos: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-
+            //lista de supervisores
             supervisores: [
                 { id: 1, nome: 'Yali Maria', iniciais: 'YM', avatar: 'user2.png' },
                 { id: 2, nome: 'Enzo Levy', iniciais: 'EL', avatar: 'user7.png' },
                 { id: 3, nome: 'Ian Zambanini', iniciais: 'YZ', avatar: 'user4.png' },
             ],
-            supervisorSelecionado: null
+
+            //supervisor selecionado
+            supervisorSelecionado: null,
+
+            //tabulação
+            mostrarTabulacaoMenu: false,
+            campos: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+
+            //histórico
+            mostrarHistorico: false,
         }
     },
 
@@ -175,6 +191,16 @@ export default {
         fecharTabulacaoMenu() {
             this.mostrarTabulacaoMenu = false
         },
+
+        //Abrir Histórico
+        abrirHistorico() {
+            this.mostrarHistorico = true
+        },
+
+        //Fechar Histórico
+        fecharHistorico() {
+            this.mostrarHistorico = false
+        }
     },
 
 }
